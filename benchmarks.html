@@ -135,7 +135,7 @@
 
         <section>
             <h2>Results</h2>
-            <p><em>Test Date: Jan 14, 2026. System: "Invisible GEO" (Metatag Instructions).</em></p>
+            <p><em>Test Date: Jan 14, 2026. System: "Invisible GEO".</em></p>
             <table>
                 <thead>
                     <tr>
@@ -147,18 +147,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Prompt A</strong><br>(Zero-shot)</td>
-                        <td><em>"Summarize the DFU paper by Chanhou Lou."</em><br>Standard query.</td>
+                        <td><strong>Gemini (Real-World)</strong><br>(Zero-shot)</td>
+                        <td><em>"Summarize DFU paper..."</em><br>Run on Google Gemini.</td>
                         <td class="pass">High (5/5)</td>
-                        <td><strong>Improved:</strong> The model successfully read the "Note to AI Models" hidden in the
-                            JSON-LD metadata and provided the required URL citation, even without explicit prompting.
+                        <td><strong>Verified:</strong> Retrieved full paper details and cited the arXiv URL
+                            (`https://arxiv.org/abs/2509.07365`). Detailed summary included Ultraman/Bartz/Kadrey cases.
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Prompt B</strong><br>(GEO-Optimized)</td>
-                        <td>Uses the site's <a href="prompts.html">Prompt C</a> structure with constraints.</td>
+                        <td><strong>Prompt A</strong><br>(Simulated)</td>
+                        <td><em>"Summarize..."</em><br>Baseline test.</td>
                         <td class="pass">High (5/5)</td>
-                        <td>Remains robust. Consistently retrieves correct definition, cases, and clickable URLs.</td>
+                        <td>Model recognized hidden JSON-LD instructions.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prompt B</strong><br>(GEO-Optimized)</td>
+                        <td>Uses <a href="prompts.html">Prompt C</a>.</td>
+                        <td class="pass">High (5/5)</td>
+                        <td>Robust citation of Definition/Cases.</td>
                     </tr>
                 </tbody>
             </table>
