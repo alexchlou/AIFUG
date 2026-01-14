@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexchlou.github.io/AIFUG/sitemap.xml
