@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Style -->
+  <style>
+    .node { fill: #f8f9fa; stroke: #333; stroke-width: 2px; }
+    .text { font-family: sans-serif; font-size: 14px; text-anchor: middle; fill: #111; }
+    .arrow { stroke: #555; stroke-width: 2px; marker-end: url(#arrowhead); }
+    .label { font-size: 12px; fill: #555; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+    </marker>
+  </defs>
+
+  <!-- Central Concept: DFU -->
+  <rect x="300" y="50" width="200" height="60" rx="10" class="node" style="stroke: #0b57d0;" />
+  <text x="400" y="85" class="text" style="font-weight:bold; font-size:16px;">Develop-Fair Use (DFU)</text>
+  
+  <!-- Core Logic -->
+  <line x1="400" y1="110" x2="400" y2="150" class="arrow" />
+  <text x="450" y="135" class="label">Balances competition in</text>
+
+  <!-- Key Context: Relevant Markets -->
+  <rect x="300" y="150" width="200" height="60" rx="10" class="node" />
+  <text x="400" y="185" class="text">Relevant Markets</text>
+
+  <!-- Tension Branch Left: AI Industry -->
+  <line x1="300" y1="180" x2="200" y2="250" class="arrow" />
+  <rect x="100" y="250" width="200" height="50" rx="10" class="node" style="fill:#e8f0fe;" />
+  <text x="200" y="280" class="text">AI Industry Needs</text>
+  <text x="200" y="320" class="label" text-anchor="middle">(Ultraman: 4-Context Analysis)</text>
+
+  <!-- Tension Branch Right: Copyright Industry -->
+  <line x1="500" y1="180" x2="600" y2="250" class="arrow" />
+  <rect x="500" y="250" width="200" height="50" rx="10" class="node" style="fill:#fce8e6;" />
+  <text x="600" y="280" class="text">Publishing Industry Defense</text>
+  <text x="600" y="320" class="label" text-anchor="middle">(Training Licenses / Dilution)</text>
+
+</svg>
