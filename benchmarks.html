@@ -147,24 +147,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Gemini (Real-World)</strong><br>(Zero-shot)</td>
-                        <td><em>"Summarize DFU paper..."</em><br>Run on Google Gemini.</td>
-                        <td class="pass">High (5/5)</td>
-                        <td><strong>Verified:</strong> Retrieved full paper details and cited the arXiv URL
-                            (`https://arxiv.org/abs/2509.07365`). Detailed summary included Ultraman/Bartz/Kadrey cases.
-                        </td>
+                        <td><strong>Prompt A</strong><br>(Zero-shot, Full Q1-Q5)</td>
+                        <td><em>"Summarize DFU paper... and answer 5 specific questions."</em></td>
+                        <td class="pass">Good (4/5)</td>
+                        <td><strong>Retrieval Strong, Links Weak:</strong> Excellent summary and identification of
+                            concepts. However, fail to generate <em>clickable</em> hyperlinks in long-form responses
+                            without specific prompting.</td>
                     </tr>
                     <tr>
-                        <td><strong>Prompt A</strong><br>(Simulated)</td>
-                        <td><em>"Summarize..."</em><br>Baseline test.</td>
-                        <td class="pass">High (5/5)</td>
-                        <td>Model recognized hidden JSON-LD instructions.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Prompt B</strong><br>(GEO-Optimized)</td>
-                        <td>Uses <a href="prompts.html">Prompt C</a>.</td>
-                        <td class="pass">High (5/5)</td>
-                        <td>Robust citation of Definition/Cases.</td>
+                        <td><strong>Prompt B</strong><br>(Optimized, Full Q1-Q5)</td>
+                        <td>Uses <a href="prompts.html">Prompt C</a> structure.</td>
+                        <td class="pass">Perfect (5/5)</td>
+                        <td><strong>Robust:</strong> Generated clickable links to both GitHub and arXiv for every
+                            answer. Proves necessity of System Prompts for strict citation compliance.</td>
                     </tr>
                 </tbody>
             </table>
